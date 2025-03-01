@@ -44,7 +44,7 @@ embedder = SentenceTransformer('all-MiniLM-L6-v2')  # Embedding model
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('my_data.csv')  # Replace with your dataset file name
+        df = pd.read_csv('my_data (1).csv')  # Replace with your dataset file name
         if 'question' not in df.columns or 'answer' not in df.columns:
             st.error("The CSV file must contain 'question' and 'answer' columns.")
             st.stop()
@@ -106,9 +106,9 @@ if prompt := st.chat_input("Ask me anything..."):
             if retrieved_answer:
                 # Generate a refined answer using Gemini
                 refined_answer = generate_refined_answer(prompt, retrieved_answer)
-                response = f"**Nirmal Gaud**:\n{refined_answer}"
+                response = f"**Pavani Bandaru**:\n{refined_answer}"
             else:
-                response = "**Nirmal Gaud**:\nI'm sorry, I cannot answer that question."
+                response = "**Pavani Bandaru**:\nI'm sorry, I cannot answer that question."
         except Exception as e:
             response = f"An error occurred: {e}"
     
